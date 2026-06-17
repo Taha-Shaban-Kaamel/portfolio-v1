@@ -1,73 +1,98 @@
-# Welcome to your Lovable project
+# Project Name
 
-## Project info
+A frontend project built with modern web technologies, focused on creating a smooth, responsive, and clean user experience.
 
-**URL**: https://lovable.dev/projects/ce68ccbf-9460-47a4-8232-6669f4dfef27
+## About the project
 
-## How can I edit this code?
+This project was built using a modern React stack with performance and maintainability in mind. The goal was to create a scalable application structure while keeping the development experience simple and fast.
 
-There are several ways of editing your application.
+## Tech Stack
 
-**Use Lovable**
+Built with:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/ce68ccbf-9460-47a4-8232-6669f4dfef27) and start prompting.
+* React
+* TypeScript
+* Vite
+* Tailwind CSS
+* shadcn/ui
 
-Changes made via Lovable will be committed automatically to this repo.
+## Running the project locally
 
-**Use your preferred IDE**
+If you want to run the project on your machine:
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+```bash id="h1x8b2"
+# Clone the repository
+git clone <your-repo-url>
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+# Go into the project folder
+cd <project-name>
 
-Follow these steps:
+# Install dependencies
+npm install
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+After that, open your browser and the app should be running locally.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Available commands
 
-**Use GitHub Codespaces**
+Start development server:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```bash id="z9m2pa"
+npm run dev
+```
 
-## What technologies are used for this project?
+Create production build:
 
-This project is built with:
+```bash id="1q7lnd"
+npm run build
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Preview production build:
 
-## How can I deploy this project?
+```bash id="84nb7v"
+npm run preview
+```
 
-Simply open [Lovable](https://lovable.dev/projects/ce68ccbf-9460-47a4-8232-6669f4dfef27) and click on Share -> Publish.
+Run linter:
 
-## Can I connect a custom domain to my Lovable project?
+```bash id="2kmd81"
+npm run lint
+```
 
-Yes, you can!
+## Project structure
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+```bash id="m4v7pw"
+src/
+ ├── components/
+ ├── pages/
+ ├── hooks/
+ ├── services/
+ ├── utils/
+ ├── assets/
+ └── App.tsx
+```
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## Deployment
+
+You can deploy this project on any frontend hosting platform like:
+
+* Vercel
+* Netlify
+* Cloudflare Pages
+
+Build command:
+
+```bash id="3v7azx"
+npm run build
+```
+
+## Notes
+
+This project follows a reusable component-based structure and uses modern frontend development practices for better scalability and maintainability.
+
+## Author
+
+Built by **Taha Shaban** 👨‍💻
