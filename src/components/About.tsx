@@ -51,7 +51,6 @@ const About = () => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          // Animate skill bars with staggered timing
           setTimeout(() => {
             const newProgress: Record<string, number> = {};
             skills.forEach((skill, index) => {
@@ -62,7 +61,7 @@ const About = () => {
           }, 500);
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.05 }
     );
 
     if (sectionRef.current) {
@@ -74,14 +73,13 @@ const About = () => {
 
   return (
     <section id="about" ref={sectionRef} className="py-20 relative overflow-hidden">
-      {/* Background decoration */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
         <Sparkles className="absolute top-20 right-20 w-6 h-6 text-primary/20 animate-glow floating-element" />
         <div className="absolute bottom-20 left-20 w-32 h-32 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-xl animate-pulse-glow" />
       </div>
 
       <div className="container mx-auto px-6">
-        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
+        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'animate-fade-in' : 'opacity-1'}`}>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-reveal">
             About <span className="gradient-text animate-flip-in">Me</span>
           </h2>
@@ -92,19 +90,19 @@ const About = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-          <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'animate-slide-in-left' : 'opacity-0'}`}>
+          <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'animate-slide-in-left' : 'opacity-1'}`}>
             <div className="glass p-8 rounded-2xl hover-lift glow-border relative overflow-hidden">
               <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-xl animate-pulse" />
               <h3 className="text-2xl font-bold mb-6 gradient-text animate-bounce-in">My Story</h3>
               <p className="text-gray-300 mb-4 leading-relaxed animate-fade-in" style={{ animationDelay: '0.5s' }}>
-                With over 1 years of experience in web development, I specialize in creating 
-                high-performance applications using cutting-edge technologies. My journey started 
-                with a curiosity for problem-solving and has evolved into a passion for crafting 
+                With over 1 years of experience in web development, I specialize in creating
+                high-performance applications using cutting-edge technologies. My journey started
+                with a curiosity for problem-solving and has evolved into a passion for crafting
                 digital experiences that make a difference.
               </p>
               <p className="text-gray-300 leading-relaxed animate-fade-in" style={{ animationDelay: '0.7s' }}>
-                I believe in continuous learning and staying up-to-date with the latest trends 
-                in technology. When I'm not coding, you'll find me contributing to open-source 
+                I believe in continuous learning and staying up-to-date with the latest trends
+                in technology. When I'm not coding, you'll find me contributing to open-source
                 projects or mentoring fellow developers.
               </p>
             </div>
@@ -126,9 +124,9 @@ const About = () => {
                       </span>
                     </div>
                     <div className="h-3 bg-gray-800 rounded-full overflow-hidden">
-                      <div 
+                      <div
                         className={`h-full bg-gradient-to-r ${skill.color} rounded-full transition-all duration-1500 ease-out animate-pulse-glow`}
-                        style={{ 
+                        style={{
                           width: `${skillProgress[skill.name] || 0}%`,
                           transitionDelay: `${index * 200}ms`
                         }}
@@ -145,11 +143,10 @@ const About = () => {
           {features.map((feature, index) => {
             const Icon = feature.icon;
             return (
-              <Card 
+              <Card
                 key={feature.title}
-                className={`glass border-0 hover-lift hover:hover-rotate glow-border group cursor-pointer transition-all duration-1000 ${
-                  isVisible ? 'animate-bounce-in' : 'opacity-0'
-                }`}
+                className={`glass border-0 hover-lift hover:hover-rotate glow-border group cursor-pointer transition-all duration-1000 ${isVisible ? 'animate-bounce-in' : 'opacity-0'
+                  }`}
                 style={{ animationDelay: `${600 + index * 200}ms` }}
               >
                 <CardContent className="p-6 text-center relative overflow-hidden">
